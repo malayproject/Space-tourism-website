@@ -1,0 +1,308 @@
+:root   {
+    --veryDarkBlue: #0b0d17;
+    --lightGreyishBlue: #d0d6f9;
+    --darkGrey: #979797;
+    --white: #ffffff;
+    --barlowCondFamily: 'Barlow Condensed', sans-serif;
+    --bellefairFamily: 'Bellefair', serif;
+    --barlowFamily: 'Barlow', sans-serif;
+    --h1FSize: 150px;
+    --h1TFSize: 150px;
+    --h1MFSize: 80px;
+    /* --h2FSize: 100px;
+    --h2TFSize: 80px;
+    --h2MFSize: 56px;
+    --h3FSize: 56px;
+    --h3TFSize: 40px;
+    --h3MFSize: 24px;
+    --h4TFSize: 24px;
+    --h4MFSize: 16px; */
+    --h4FSize: 32px;
+    --h5FSize: 28px;
+    --h5TFSize: 20px;
+    --h5MFSize: 16px;
+}
+
+*   {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body   {
+    background-image: url(./resources/assets/home/background-home-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    /* width: 1440px; */
+    height: 100vh;
+    /* height: 900px; */
+    margin: 0;
+    overflow: hidden;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+}
+
+
+nav {
+    width: 96%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid red; */
+    justify-self: right;
+    justify-content: space-between;
+    margin-left: auto;
+
+    margin: 3% 0 0 auto;
+}
+
+
+.logoDiv    {
+    width: 48px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lineDiv    {
+    width: 560px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* border: 1px solid white; */
+    overflow: visible;
+    z-index: 1;
+}
+hr {
+    width: 120%;
+    height: 1px;
+    opacity: 40%;
+    margin-left: 10%;
+
+    overflow: visible;
+}
+.navDiv {
+    width: 830px;
+    /* border: 1px dashed white; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: white;
+    align-items: center;
+    font-family: var(--barlowCondFamily);
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 3px;
+    background-color: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(25px);
+}
+
+.inNavDiv   {
+    width: 660px;
+    padding-right: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.navDivItem {
+    display: flex;
+    flex-direction: column;
+}
+.linkDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    color: var(--lightGreyishBlue);
+    height: 93px;
+}
+.linkDiv:focus{
+    color: var(--white);
+    outline: none;
+}
+.under  {
+    width: 100%;
+    height: 3px;
+}
+.linkDiv:hover ~ .under  {
+    background-color: var(--darkGrey);
+}
+.linkDiv:focus ~ .under  {
+    background-color: var(--white);
+
+}
+.countDiv{
+    font-weight: 500;
+}
+.main   {
+    /* height: 764px; */
+    height: 87%;
+    width: 80%;
+    /* border: 1px solid yellow; */
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    padding-bottom: 15vh;
+}
+.spaceDiv   {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    /* border: 1px dashed white; */
+    width: 50%;
+    height: 100%;
+    padding-top: 45px;
+}
+h1  {
+    font-family: var(--bellefairFamily);
+    font-size: var(--h1FSize);
+    font-weight: 400;
+    color: var(--white);
+    /* border: 1px dashed white; */
+    letter-spacing: 8px;
+    /* padding-top: 30px; */
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+}
+h1.M  {
+    font-size: var(--h1MFSize);
+}
+h5  {
+    font-family: var(--barlowCondFamily);
+    font-size: var(--h5FSize);
+    color: var(--lightGreyishBlue);
+    font-weight: 300;
+    letter-spacing: 3px;
+    word-spacing: 2px;
+    /* border: 1px dashed white; */
+    height: 140px;
+    display: flex;
+    align-items: flex-end;
+}
+h5.M  {
+    font-size: var(--h5MFSize);
+}
+p{
+    font-family: var(--barlowFamily);
+    color: var(--lightGreyishBlue);
+    text-align: justify;
+    word-spacing: 0px;
+    font-size: 18px;
+    font-weight: 400;
+    /* border: 1px solid green; */
+    line-height: 32px;
+    height: 130px;
+    display: flex;
+    align-items: flex-end;
+    padding-right: 18%;
+    min-width: 565px;
+}
+.expDiv {
+    width: 50%;
+    /* border: 1px solid yellow; */
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+    /* padding: 0 0 100px 0; */
+}
+.expHalo    {
+    width: 364px;
+    height: 364px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.expHalo:hover, .expHalo:focus {
+    background-color: rgba(97,97,97,0.5);
+    transition: all 0.15s ease-in;
+    outline: none;
+}
+.exp    {
+    width: 274px;
+    height: 274px;
+    background-color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--veryDarkBlue);
+    font-family: var(--bellefairFamily);
+    font-size: var(--h4FSize);
+}
+
+/****************************Tablet*******************************/
+@media screen and (max-width: 900px) {
+    body    {
+        display: flex;
+        flex-direction: column;
+        background-image: url(./resources/assets/home/background-home-tablet.jpg);
+    }
+    nav {
+        margin-top: 0;
+        justify-self: right;
+    }
+    .lineDiv    {
+        display: none;
+    }
+    .navDiv {
+        width: 65%;
+        font-size: 14px;
+    }
+    .inNavDiv   {
+        justify-content: space-around;
+        padding: 0 4%;
+    }
+    .countDiv   {
+        display: none;
+    }
+    .main{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        gap: 100px;
+    }
+    h1  {
+        font-size: var(--h1TFSize);
+    }
+    h5  {
+        font-size: var(--h5TFSize);
+        height: 110px;
+    }
+    .spaceDiv   {
+        height: 55%;
+        width: 100%;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    p {
+        text-align: center;
+        padding: 0;
+        width: 80%;
+        min-width: 300px;
+        height: 150px;
+    }
+    .expDiv {
+        height: 45%;
+        width: 60%;
+        align-items: center;
+        justify-content: center;
+    }
+    .expHalo    {
+        width: 332px;
+        height: 332px;
+    }
+    .exp    {
+        width: 242px;
+        height: 242px;
+    }
+}
