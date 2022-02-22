@@ -54,7 +54,6 @@ nav {
     justify-self: right;
     justify-content: space-between;
     margin-left: auto;
-
     margin: 3% 0 0 auto;
 }
 
@@ -139,13 +138,19 @@ hr {
 .countDiv{
     font-weight: 500;
 }
-.main   {
-    /* height: 764px; */
-    height: 87%;
-    width: 80%;
-    /* border: 1px solid yellow; */
+.hidden {
+    display: none;
+}
+.dFlex   {
     display: flex;
     flex-direction: row;
+}
+
+.homeTab   {
+    /* height: 764px; */
+    height: 87vh;
+    width: 80%;
+    /* border: 1px solid yellow; */
     margin: 0 auto;
     padding-bottom: 15vh;
 }
@@ -218,7 +223,7 @@ p{
     border-radius: 50%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 }
 .expHalo:hover, .expHalo:focus {
     background-color: rgba(97,97,97,0.5);
@@ -263,7 +268,7 @@ p{
     .countDiv   {
         display: none;
     }
-    .main{
+    .homeTab    {
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -300,6 +305,7 @@ p{
     .expHalo    {
         width: 332px;
         height: 332px;
+        align-items: center;
     }
     .exp    {
         width: 242px;

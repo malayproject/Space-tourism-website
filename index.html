@@ -23,56 +23,92 @@
         </div>
         <div class="lineDiv"><hr></div>
         <div class="navDiv">
-            <div class="inNavDiv">
-                <div class="navDivItem homeDiv">
+            <div class="inNavDiv" id="inNavDiv">
+                <div class="navDivItem homeTag" id="homeTag">
                     <div class="linkDiv" tabindex="0">
                         <div class="countDiv">00</div>
-                        <div class="textDiv">HOME</div>
+                        <div class="textDiv" id="homeTag">HOME</div>
                     </div>
                     <div class="under undHome"></div>
                 </div>
-                <div class="navDivItem destDiv">
+                <div class="navDivItem destTag" id="destTag">
                     <div class="linkDiv" tabindex="0">
                         <div class="countDiv">01</div>
-                        <div class="textDiv">DESTINATION</div>
+                        <div class="textDiv" id="destTag">DESTINATION</div>
                     </div>
                     <div class="under undDest"></div>
                 </div>
-                <div class="navDivItem crewDiv">
+                <div class="navDivItem crewTag">
                     <div class="linkDiv" tabindex="0">
                         <div class="countDiv">02</div>
-                        <div class="textDiv">CREW</div>
+                        <div class="textDiv" id="crewTag">CREW</div>
                     </div>
                     <div class="under undCrew"></div>
                 </div>
-                <div class="navDivItem techDiv">
+                <div class="navDivItem techTag">
                     <div class="linkDiv" tabindex="0">
                         <div class="countDiv">03</div>
-                        <div class="textDiv">TECHNOLOGY</div>
+                        <div class="textDiv" id="techTag">TECHNOLOGY</div>
                     </div>
                     <div class="under undTech"></div>
                 </div>
             </div>
         </div>
     </nav>
-    <div class="main">
-        <div class="spaceDiv">
-            <h5>
-                SO, YOU WANT TO TRAVEL TO
-            </h5>
-            <h1>
-                SPACE
-            </h1>
-            <p>
-                Let's face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we'll give you a truly out of this world experience!
-            </p>
-        </div>
-        <div class="expDiv">
-            <div class="expHalo" tabindex="0">
-                <div class="exp">EXPLORE</div>
+    <main>
+        <div class="homeTab dFlex" id="homeTab">
+            <div class="spaceDiv">
+                <h5>
+                    SO, YOU WANT TO TRAVEL TO
+                </h5>
+                <h1>
+                    SPACE
+                </h1>
+                <p>
+                    Let's face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we'll give you a truly out of this world experience!
+                </p>
             </div>
-            <!-- <div class="exp" tabindex="0">EXPLORE</div> -->
+            <div class="expDiv">
+                <div class="expHalo" tabindex="0">
+                    <div class="exp">EXPLORE</div>
+                </div>
+                <!-- <div class="exp" tabindex="0">EXPLORE</div> -->
+            </div>
         </div>
-    </div>
+        <div class="destTab hidden" id="destTab">
+            <div class="leftDiv">
+                <div class="heading" style="color: white;height: 15vh;">
+                    <div class="countDiv">01</div>
+                    <div class="text">PICK YOUR DESTINATION</div>
+                </div>
+                <img src="./resources/assets/destination/image-moon.png" alt="" class="">
+                <img src="./resources/assets/destination/image-mars.png" alt="" class="hidden">
+                <img src="./resources/assets/destination/image-europa.png" alt="" class="hidden">
+                <img src="./resources/assets/destination/image-titan.png" alt="" class="hidden">
+            </div>
+            <div class="rightDiv">
+            </div>
+        </div>
+        <div class="crewTab hidden" id="crewTab">
+            <div class="leftDiv">
+                <div class="heading" style="color: white;height: 15vh;">
+                    <div class="countDiv">02</div>
+                    <div class="text">PICK YOUR DESTINATION</div>
+                </div>
+            </div>
+            <div class="rightDiv">
+            </div>
+        </div>
+        <div class="techTab hidden" id="techTab">
+            <div class="leftDiv">
+                <div class="heading" style="color: white;height: 15vh;">
+                    <div class="countDiv">03</div>
+                    <div class="text">PICK YOUR DESTINATION</div>
+                </div>
+            </div>
+            <div class="rightDiv">
+            </div>
+        </div>
+    </main>
 </body>
 </html>
