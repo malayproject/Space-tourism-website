@@ -1,3 +1,9 @@
+publish link:
+https://malayproject.github.io/Space-tourism-website/
+
+repository link:
+https://github.com/malayproject/Space-tourism-website/
+
 # Frontend Mentor - Space tourism website
 
 ![Design preview for the Space tourism website coding challenge](./preview.jpg)
