@@ -1,32 +1,49 @@
 var tagElArr, homeTabEl, destTabEl, crewTabEl, techTabEl, 
-    homeTagEl, destTagEl, crewTagEl, techTagEl,inNavDivEl, bodyEl;
+    homeTagEl, destTagEl, crewTagEl, techTagEl,inNavDivHomeEl, expEl, bodyEl;
 
 var inNavDivDestEl, destsImgEl, destsDivEl;
 var inNavDivCrewEl, crewImgEl, crewDivEl;
 var inNavDivTechEl, techsImgEl, techsDivEl;
 
+var resetSubPage = (navEl, imgsEl, descEl) => {
+    for(let ind = 0 ; ind < navEl.children.length; ind++)  {
+        if(ind === 0)   {
+            navEl.children[ind].classList.add('selected')
+            imgsEl.children[ind].classList.remove('hidden')
+            descEl.children[ind].classList.remove('hidden')
+        }else{
+            navEl.children[ind].classList.remove('selected')
+            imgsEl.children[ind].classList.add('hidden')
+            descEl.children[ind].classList.add('hidden')
+        }
+    }
+}
+
 var mainContentHandler = e => {
-    console.log('mainContenthandler')
     tagElArr.forEach(item => {
-        if(inNavDivEl !== e.target && inNavDivEl.contains(e.target))   {
+        if(inNavDivHomeEl !== e.target && inNavDivHomeEl.contains(e.target))   {
             if(item[0] === e.target || item[0].contains(e.target))   {
+                item[0].classList.add('selected')
                 item[1].classList.remove('hidden')
                 item[1].classList.add('dFlex')
-                console.log(screen.width)
                 if(item[1].id === 'homeTab')    {
                     bodyEl.classList.remove('dest', 'crew', 'tech')
                     bodyEl.classList.add('home')
                 }else if(item[1].id === 'destTab'){
                     bodyEl.classList.remove('home', 'crew', 'tech')
                     bodyEl.classList.add('dest')
+                    resetSubPage(inNavDivDestEl, destsImgEl, destsDivEl)
                 }else if(item[1].id === 'crewTab'){
                     bodyEl.classList.remove('home', 'dest', 'tech')
                     bodyEl.classList.add('crew')
+                    resetSubPage(inNavDivCrewEl, crewImgEl, crewsDivEl)
                 }else   {
                     bodyEl.classList.remove('home', 'dest', 'crew')
                     bodyEl.classList.add('tech')
+                    resetSubPage(inNavDivTechEl, techsImgEl, techsDivEl)
                 }
             }else{
+                item[0].classList.remove('selected')
                 item[1].classList.remove('dFlex')
                 item[1].classList.add('hidden')
             }
@@ -34,29 +51,35 @@ var mainContentHandler = e => {
     });
 }
 var contentHandler = (navEl, imgsEl, descEl, e) => {
-    console.log(e.target)
-    // navEl.children.forEach((item, ind) => {
-    //     if(navEl !== e.target && navEl.contains(e.target))   {
-    //         if(item === e.target || item.contains(e.target))   {
-    //             imgsEl.children[ind].classList.remove('hidden')
-    //             descEl.children[ind].classList.remove('hidden')
-    //             console.log(screen.width)
-    //         }else{
-    //             imgsEl.children[ind].classList.add('hidden')
-    //             descEl.children[ind].classList.add('hidden')
-    //         }
-    //     }
-    // });
     for(let i = 0; i < navEl.children.length; i++)  {
         if(navEl !== e.target && navEl.contains(e.target))   {
             if(navEl.children[i] === e.target || navEl.children[i].contains(e.target))   {
+                navEl.children[i].classList.add('selected')
                 imgsEl.children[i].classList.remove('hidden')
                 descEl.children[i].classList.remove('hidden')
-                console.log(screen.width)
             }else{
+                navEl.children[i].classList.remove('selected')
                 imgsEl.children[i].classList.add('hidden')
                 descEl.children[i].classList.add('hidden')
             }
+
+        }
+    }
+}
+var showDestHandler = () => {
+    resetSubPage(inNavDivDestEl, destsImgEl, destsDivEl)
+    bodyEl.classList.remove('home', 'crew', 'tech')
+    bodyEl.classList.add('dest')
+    let len = inNavDivHomeEl.children.length
+    for(let ind = 0; ind < len; ind++)  {
+        if(inNavDivHomeEl.children[ind].id === 'destTag')   {
+            tagElArr[ind][0].classList.add('selected')
+            tagElArr[ind][1].classList.remove('hidden')
+            tagElArr[ind][1].classList.add('dFlex')
+        }else{
+            tagElArr[ind][0].classList.remove('selected')
+            tagElArr[ind][1].classList.remove('dFlex')
+            tagElArr[ind][1].classList.add('hidden')
         }
     }
 }
@@ -78,10 +101,11 @@ var windowResizeHandler = e => {
 }
 
 var getEventListeners = () => {
-    inNavDivEl.addEventListener('mouseup', mainContentHandler)
+    inNavDivHomeEl.addEventListener('mouseup', mainContentHandler)
     inNavDivDestEl.addEventListener('mouseup', contentHandler.bind(this, inNavDivDestEl, destsImgEl, destsDivEl))
     inNavDivCrewEl.addEventListener('mouseup', contentHandler.bind(this, inNavDivCrewEl, crewImgEl, crewsDivEl))
     inNavDivTechEl.addEventListener('mouseup', contentHandler.bind(this, inNavDivTechEl, techsImgEl, techsDivEl))
+    expEl.addEventListener('mouseup', showDestHandler)
     window.addEventListener('resize', windowResizeHandler)
 }
 
@@ -101,7 +125,7 @@ var initElements = () => {
     techTagEl = document.getElementById('techTag')
     tagElArr.push([techTagEl, techTabEl])
     
-    inNavDivEl = document.getElementById('inNavDivMain')
+    inNavDivHomeEl = document.getElementById('inNavDivMain')
     inNavDivDestEl = document.getElementById('inNavDivDest')
     destsImgEl = document.getElementById('destsImg')
     destsDivEl = document.getElementById('destsDiv')
@@ -113,20 +137,7 @@ var initElements = () => {
     inNavDivTechEl = document.getElementById('inNavDivTech')
     techsImgEl = document.getElementById('techsImg')
     techsDivEl = document.getElementById('techsDiv')
-    // destElArr = []
-    // homeTabEl = document.getElementById('homeTab')
-    // destTabEl = document.getElementById('destTab')
-    // crewTabEl = document.getElementById('crewTab')
-    // techTabEl = document.getElementById('techTab')
-
-    // homeTagEl = document.getElementById('homeTag')
-    // tagElArr.push([homeTagEl, homeTabEl])
-    // destTagEl = document.getElementById('destTag')
-    // tagElArr.push([destTagEl, destTabEl])
-    // crewTagEl = document.getElementById('crewTag')
-    // tagElArr.push([crewTagEl, crewTabEl])
-    // techTagEl = document.getElementById('techTag')
-    // tagElArr.push([techTagEl, techTabEl])
+    expEl = document.getElementById('exp')
     bodyEl = document.body
 }
 

@@ -33,15 +33,9 @@ body   {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw;
-    /* width: 1440px; */
     height: 100vh;
-    /* height: 900px; */
     margin: 0;
     overflow: hidden;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
     color: white;
 }
 
@@ -87,13 +81,11 @@ nav {
     height: 10%;
     display: flex;
     flex-direction: row;
-    /* border: 1px solid red; */
     justify-self: right;
     justify-content: space-between;
     margin-left: auto;
     margin: 3% 0 0 auto;
 }
-
 
 .logoDiv    {
     width: 48px;
@@ -108,7 +100,6 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* border: 1px solid white; */
     overflow: visible;
     z-index: 1;
 }
@@ -122,7 +113,6 @@ hr {
 }
 .navDiv {
     width: 830px;
-    /* border: 1px dashed white; */
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -143,7 +133,6 @@ hr {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    /* border: 1px solid white; */
 }
 .navDivItem {
     display: flex;
@@ -185,32 +174,27 @@ hr {
 }
 
 .contentDiv   {
-    /* height: 764px; */
     height: 87vh;
-    width: 80%;
-    /* border: 1px solid yellow; */
-    margin: 0 auto;
+    width: 80vw;
+    margin: 0 10vw;
 }
 .contentDiv.home{
-    padding-bottom: 15vh;
+    padding-bottom: 10vh;
 }
 .spaceDiv   {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    /* border: 1px dashed white; */
     width: 50%;
     height: 100%;
-    padding-top: 45px;
+    padding: 45px 0 5vh 0;
 }
 h1  {
     font-family: var(--bellefairFamily);
     font-size: var(--h1FSize);
     font-weight: 400;
     color: var(--white);
-    /* border: 1px dashed white; */
     letter-spacing: 8px;
-    /* padding-top: 30px; */
     height: 200px;
     display: flex;
     align-items: flex-end;
@@ -225,7 +209,6 @@ h5  {
     font-weight: 300;
     letter-spacing: 3px;
     word-spacing: 2px;
-    /* border: 1px dashed white; */
     height: 140px;
     display: flex;
     align-items: flex-end;
@@ -240,7 +223,6 @@ p{
     word-spacing: 0px;
     font-size: 18px;
     font-weight: 400;
-    /* border: 1px solid green; */
     line-height: 32px;
     height: 130px;
     display: flex;
@@ -250,11 +232,10 @@ p{
 }
 .expDiv {
     width: 50%;
-    /* border: 1px solid yellow; */
+    height: 100%;
     display: flex;
     justify-content: right;
     align-items: flex-end;
-    /* padding: 0 0 100px 0; */
 }
 .expHalo    {
     width: 364px;
@@ -263,7 +244,7 @@ p{
     border-radius: 50%;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
 }
 .expHalo:hover, .expHalo:focus {
     background-color: rgba(97,97,97,0.5);
@@ -284,12 +265,10 @@ p{
 }
 
 .leftDiv    {
-    /* border: 1px dashed green; */
     width: 45%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-around; */
     align-items: flex-end;
     gap: 10%;
 
@@ -297,10 +276,8 @@ p{
 
 .leftDiv .heading {
     width: 100%;
-    /* border: 1px solid yellow; */
     display: flex;
     flex-direction: row;
-    /* justify-content: center; */
     align-items: flex-end;
     gap: 3%;
     font-family: var(--barlowCondFamily);
@@ -316,9 +293,7 @@ p{
 }
 
 .leftDiv img{
-    /* width: 80%; */
     height: auto;
-    /* border: 1px solid red; */
 }
 .destsImg    {
     width: 100%;
@@ -340,7 +315,6 @@ padding-left: 20%;
 .destContDiv    {
     width: 70%;
     height: 52%;
-    /* border: 1px solid white; */
 }
 
 .destContDiv .navDivItem .textDiv    {
@@ -352,17 +326,14 @@ padding-left: 20%;
 .destContDiv .inNavDiv   {
     height: 10%;
     width: 70%;
-    /* border: 1px dashed red; */
 }
 
 .destContDiv .inNavDiv .navDivItem {
     height: 100%;
-    /* border: 1px dashed yellow; */
 }
 
 .destContDiv .inNavDiv .linkDiv {
     height: 90%;
-    /* border: 1px dashed yellow; */
 }
 .destContDiv .textDiv   {
     letter-spacing: 3px;
@@ -387,7 +358,6 @@ padding-left: 20%;
 .destDescDiv .dataDiv   {
     width: 100%;
     height: 18%;
-    /* border: 1px solid green; */
     margin: 0;
     display: flex;
     flex-direction: row;
@@ -398,7 +368,6 @@ padding-left: 20%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    /* border: 1px solid yellow; */
 }
 .timeDiv    {
     width: 50%;
@@ -406,13 +375,11 @@ padding-left: 20%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    /* border: 1px solid orange; */
 }
 .dataDiv .text{
     font-family: var(--barlowCondFamily);
     font-size: 14px;
     color: var(--lightGreyishBlue);
-    /* font-weight: 200; */
 }
 .dataDiv .val    {
     font-family: var(--bellefairFamily);
@@ -422,13 +389,11 @@ padding-left: 20%;
 
 .leftDiv.crew {
     align-items: flex-start;
-    /* border: 1px solid yellow; */
     width: 56%;
 }
 
 .leftDiv.crew .crewsDiv {
     width: 100%;
-    /* border: 1px solid green; */
     height: 50%;
     padding-top: 0%;
 
@@ -436,36 +401,28 @@ padding-left: 20%;
 
 .crewDescDiv   {
     height: 100%;
-    /* border: 1px solid red; */
 }
 .crewRole   {
     font-size: var(--h4FSize);
     font-family: var(--bellefairFamily);
     color: var(--darkGrey);
-    /* border: 1px solid white; */
     padding: 3% 0 0 0;
     height: 22%;
 }
 .crewName   {
     font-size: var(--h3FSize);
     font-family: var(--bellefairFamily);
-    /* border: 1px solid white; */
     height: 30%;
 }
 .crewDesc p{
     width: 70%;
-    /* border: 1px solid white; */
     height: 25%;
-    /* margin-top: 2%; */
 }
 
 .inNavDiv.crew {
     width: 30%;
-    /* height: 1%; */
     display: flex;
     flex-direction: row;
-    /* justify-content: space-around; */
-    /* border: 1px dashed white; */
     margin-top: -4%;
     padding: 0% 7% 0 0;
 }
@@ -477,15 +434,10 @@ padding-left: 20%;
     background-color: var(--darkGrey);
     align-items: flex-end;
     outline: none;
-
-    /* border: 1px solid red; */
 }
 .inNavDiv.crew .radio:hover {
     background-color: var(--white);
 
-}
-.inNavDiv.crew .radio:focus {
-    background-color: var(--white);
 }
 
 .rightDiv.crew{
@@ -493,34 +445,26 @@ padding-left: 20%;
     display: flex;
     flex-direction: column;
     justify-content: end;
-    /* border: 1px solid greenyellow; */
     padding-bottom: 1%;
 }
 
 .rightDiv.crew img{
     max-width: 110%;
     min-width: 400px;
-    /* width: 100%; */
-    /* border: 1px solid white; */
-}
-.contentDiv {
-    /* border: 1px solid green; */
 }
 
 .leftDiv.tech{
-    width: 70%;
+    width: 75%;
     height: 100%;
-    /* border: 1px solid white; */
 }
 .inNavDiv.tech  {
-    width: 28%;
+    width: 25%;
     height: 90%;
     display: flex;
     flex-direction: column;
-    /* border: 1px solid green; */
     justify-content: space-around;
     align-items: center;
-    padding-right: 18%;
+    padding-right: 13%;
 }
 
 .inNavDiv.tech .radio{
@@ -544,15 +488,13 @@ padding-left: 20%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* border: 1px solid red; */
     width: 100%;
     height: 100%;
     padding-bottom: 250px;
 }
 .techsDiv   {
     width: 72%;
-    height: 75%;
-    /* border: 1px solid yellow; */
+    height: 80%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -570,24 +512,20 @@ padding-left: 20%;
     font-size: 16px;
     letter-spacing: 3px;
     color: var(--lightGreyishBlue);
-    /* border: 1px dashed white; */
 }
 .techName   {
     width: 100%;
     height: 28%;
     font-family: var(--bellefairFamily);
     font-size: var(--h3FSize);
-    /* border: 1px dashed white; */
     padding-top: 2%;
 }
 .techDesc   {
-    width: 100%;
+    width: 90%;
     height: 60%;
-    /* border: 1px dashed red; */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    /* justify-content: flex-end; */
     font-family: var(--barlowFamily);
     color: var(--lightGreyishBlue);
     font-size: 18px;
@@ -595,11 +533,25 @@ padding-left: 20%;
     padding-top: 3%;
 }
 .rightDiv.tech{
-    /* width: 26%; */
+    width: 30%;
 }
 .techsImg   {
-    border: 1px solid red;
-    margin-left: 60%;
+    padding-left: 40%;
+}
+.techsImg img{
+    width: 120%;
+    min-width: 25vw;
+}
+
+.radio.selected   {
+    background-color: var(--white) !important;
+    color: var(--veryDarkBlue);
+}
+.navDivItem.selected   .linkDiv{
+    color: var(--white);
+}
+.navDivItem.selected   .under{
+    background-color: var(--white);
 }
 
 
@@ -609,7 +561,6 @@ padding-left: 20%;
     body    {
         display: flex;
         flex-direction: column;
-        /* background-image: url(./resources/assets/home/background-home-tablet.jpg); */
     }
     nav {
         margin-top: 0;
