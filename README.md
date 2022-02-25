@@ -1,16 +1,16 @@
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/malayproject/Space-tourism-website/)
-- Live Site URL: [Add live site URL here](https://malayproject.github.io/Space-tourism-website/)
+- Solution URL: [solution URL](https://github.com/malayproject/Space-tourism-website/)
+- Live Site URL: [live site URL](https://malayproject.github.io/Space-tourism-website/)
 
 ### Screenshot
 
-![Screenshot](./screenshot.jpg)
+![Screenshot](./screenshot.JPG)
 
 # Frontend Mentor - Space tourism website
 
-![Design preview for the Space tourism website coding challenge](./preview.jpg)
+![Design preview for the Space tourism website coding challenge](./preview.JPG)
 
 ## Welcome! 👋
 
