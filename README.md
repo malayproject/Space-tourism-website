@@ -1,7 +1,6 @@
 
 ### Links
 
-- Solution URL: [solution URL](https://github.com/malayproject/Space-tourism-website/)
 - Live Site URL: [live site URL](https://malayproject.github.io/Space-tourism-website/)
 
 ### Screenshot
